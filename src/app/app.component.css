@@ -1,0 +1,16 @@
+.thumbartwork{
+	display:block;
+	float:left;
+	height:400px;
+	overflow:hidden;
+	width:50%;
+}
+.thumbart{
+	height:500px;
+}
+.bigpainting{
+	width:100%;
+}
+.container{
+	width:100%;
+}

@@ -1,0 +1,25 @@
+
+<div class="container">
+	<div class="col-md-3">
+		<ul class="paintings">
+			<div *ngFor="let painting of paintings" (click)="onSelect(painting)">
+				<div class="thumbartwork">
+					<img class="thumbart" src={{painting.src}} />
+				</div>
+					
+			</div>
+		</ul>
+	</div>
+	<div *ngIf="selectedPainting">
+		<div class="col-md-6">
+			<img class="bigpainting" src={{selectedPainting.src}}/>
+		</div>
+		<div class="col-md-2">
+			<h2>{{selectedPainting.name}}</h2>
+			<div><label>id: </label>{{selectedPainting.id}}</div>
+			<div>
+			   
+			</div>
+		</div>
+	</div>
+</div>
