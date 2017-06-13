@@ -1,0 +1,5 @@
+[
+	{"id": 1, "name": "Oy", "year": 2016, "medium": "Oil", "description": "a painting", "src": "/assets/paintings/oy.jpg"},
+	
+	{"id": 3, "name": "Public Execution", "year": 2016, "medium": "Oil", "description": "a painting", "src": "/assets/paintings/publicexecution.jpg"}
+];

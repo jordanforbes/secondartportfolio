@@ -1,24 +1,33 @@
+import { Component, OnInit } from '@angular/core';
+import { Router }	from '@angular/router';
+
 import { Painting } from './painting';
-import { Component } from '@angular/core';
+import { PaintingService } from './painting.service';
 
-
-
-const PAINTINGS: Painting[]= [
-	{id: 1, name: 'Oy', year: 2016, medium: 'Oil', description: 'a painting', src: '/assets/paintings/oy.jpg'},
-	
-	{id: 3, name: 'Public Execution', year: 2016, medium: 'Oil', description: 'a painting', src: '/assets/paintings/publicexecution.jpg'}
-];
 
 @Component({
   selector: 'my-app',
   templateUrl:'./painting.component.html',
-  styleUrls:['./../app.component.css']
+  styleUrls:['./../app.component.css'],
+  providers: [PaintingService]
   
 })
 export class PaintingsComponent  { 
 	title = 'Jordan Forbes';
-	paintings = PAINTINGS;
 	selectedPainting: Painting;
+
+	paintings: Painting[];
+
+	constructor(private paintingService: PaintingService) { }
+
+	getPaintings(): void{
+		this.paintingService.getPaintings().then(paintings => this.paintings = paintings)
+	}
+
+	ngOnInit(): void {
+		this.getPaintings()
+	}
+
 
 	onSelect(painting: Painting): void {
 		this.selectedPainting = painting;

@@ -1,12 +1,17 @@
 .thumbartwork{
 	display:block;
 	float:left;
-	height:400px;
+	height:300px;
 	overflow:hidden;
-	width:50%;
+	width:30%;
+	opacity:0.5;
+}
+.thumbartwork:hover{
+	opacity:1;
 }
 .thumbart{
-	height:500px;
+	height:350px;
+	margin-left:-50px;
 }
 .bigpainting{
 	width:100%;
